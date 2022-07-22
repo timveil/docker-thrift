@@ -21,7 +21,8 @@ docker run -v "$(pwd):/data" ahawkins/thrift thrift --gen rb /data/service.thrif
 # How To Build This Image
 
 ```bash
-docker build -f 0.16/Dockerfile -t ahawkins/thrift:0.16.0
+THRIFT_VERSION=0.16.0
+docker build --build-arg THRIFT_VERSION -f Dockerfile -t ahawkins/thrift:0.16.0
 ```
 
 # Language Specific Installations
