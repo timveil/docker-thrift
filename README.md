@@ -21,13 +21,12 @@ docker run -v "$(pwd):/data" ahawkins/thrift thrift --gen rb /data/service.thrif
 # How To Build This Image
 
 ```bash
-THRIFT_VERSION=0.16.0
-docker build --build-arg THRIFT_VERSION -f Dockerfile -t ahawkins/thrift:0.16.0
+docker buildx build --build-arg="THRIFT_VERSION=0.18.1" -t ahawkins/thrift:0.18.1 .
 ```
 
 # Language Specific Installations
 
-Thrift generates code for many lanuages. Some languages have
+Thrift generates code for many languages. Some languages have
 additional things to install besides the thrift compiler. They are
 listed below:
 
